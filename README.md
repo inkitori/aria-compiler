@@ -26,6 +26,6 @@ after the loop, `a` holds the gcd (`21`).
 use ./run.sh, passing as an argument to print out its content at the end
 
 ```
-./run.sh !.aria
+./run.sh gcd.aria a
 # exit=21
 ```

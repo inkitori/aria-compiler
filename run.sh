@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-INPUT="${1:-!.aria}"
+INPUT="${1:-gcd.aria}"
 RETURN_VAR="${2:-}"
 
 case "$(uname -s)" in
@@ -15,7 +15,7 @@ esac
 mkdir -p build
 g++ src/*.cpp -o build/aria 2>/dev/null
 
-[ "$INPUT" = '!.aria' ] || cp -- "$INPUT" '!.aria'
+[ "$INPUT" = 'gcd.aria' ] || cp -- "$INPUT" 'gcd.aria'
 RAW="$(./build/aria 2>&1)"
 
 ASM="$(printf '%s\n' "$RAW" | sed -n '/-----GENERATING ASSEMBLY-----/,$ p' | tail -n +2)"

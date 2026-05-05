@@ -15,7 +15,7 @@ void scan_tokens(string);
 
 int main()
 {
-	Scanner scanner("!.aria");
+	Scanner scanner("gcd.aria");
 	std::vector<Token> tokens = scanner.Scan();
 	scanner.PrintTokens();
 
