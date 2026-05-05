@@ -2,5 +2,5 @@
 *.exe
 .vs
 *.o
-*.aria
 *.out
+build/
